@@ -70,7 +70,7 @@ class Baseline(object):
 
         # self.model = LogisticRegression()
         if type == 'classify':
-            self.model = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(15, ), random_state=1)
+            self.model = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=0)
             # GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=0)
             # MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(15, ), random_state=1)
         else:

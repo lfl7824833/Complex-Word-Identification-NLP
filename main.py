@@ -23,18 +23,18 @@ def execute_demo(language):
 
 
     ########################### Regression ###################33
-    # baseline2 = Baseline(language, type='regression')
+    baseline2 = Baseline(language, type='regression')
 
-    # baseline2.train(data.trainset)
+    baseline2.train(data.trainset)
 
-    # predictions = baseline2.test(data.devset)
+    predictions = baseline2.test(data.devset)
 
-    # gold_labels2 = [float(sent['gold_prob']) for sent in data.devset]
+    gold_labels2 = [float(sent['gold_prob']) for sent in data.devset]
 
-    # print("Probabilistic classification task:\nMSE:", mean_squared_error(gold_labels2, predictions),"\n\n")
+    print("Probabilistic classification task:\nMSE:", mean_squared_error(gold_labels2, predictions),"\n\n")
 
 if __name__ == '__main__':
     execute_demo('english')
-    #execute_demo('spanish')
+    execute_demo('spanish')
 
 
